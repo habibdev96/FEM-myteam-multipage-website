@@ -20,6 +20,8 @@ export const SectionHeading = styled.h2`
   span {
     color: var(--raptureBlue);
   }
+
+  ${({ dark }) => dark && `color: var(--sacrementoGreen)`};
 `;
 
 export const MicroHeading = styled.h3`

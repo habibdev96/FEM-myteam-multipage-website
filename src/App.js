@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Navbar from './components/shared/Navbar';
+import Cta from './components/shared/Cta';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route exact path='/About' component={About} />
           <Route exact path='/Contact' component={Contact} />
         </Switch>
+        <Cta />
       </Router>
     </>
   );

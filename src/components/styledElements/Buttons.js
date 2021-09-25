@@ -22,6 +22,19 @@ const Button = styled(Link)`
         color: var(--sacrementoGreen);
       }
     `}
+
+  ${({ secondary }) =>
+    secondary &&
+    css`
+      color: var(--sacrementoGreen);
+      border: 0.2rem solid var(--sacrementoGreen);
+
+      &:hover,
+      &:focus {
+        background-color: var(--sacrementoGreen);
+        color: var(--white);
+      }
+    `}
 `;
 
 export default Button;

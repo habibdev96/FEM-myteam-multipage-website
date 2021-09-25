@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const Globals = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,600;0,700;1,400&display=swap');
-
   :root {
     /* colors */
     --white: hsl(0, 0%, 100%);
