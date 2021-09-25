@@ -1,9 +1,9 @@
 import { css } from 'styled-components';
 
-const flexCenter = css`
+const flexAlign = css`
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: var(--gap);
 `;
 
 const headingStyles = css`
@@ -46,7 +46,7 @@ const maxWidthLg = css`
 `;
 
 export {
-  flexCenter,
+  flexAlign,
   headingStyles,
   textStyles,
   sectionSpacingSm,
