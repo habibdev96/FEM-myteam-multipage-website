@@ -42,7 +42,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Button primary={+true}>contact us</Button>
+        <Button to='/Contact' primary={+true}>
+          contact us
+        </Button>
       </Container>
     </nav>
   );
