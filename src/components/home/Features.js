@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import {
   maxWidthLg,
@@ -8,10 +7,10 @@ import {
 } from '../../abstracts/Mixins';
 import StyledUnderline from '../styledElements/Underline';
 import { SectionHeading } from '../styledElements/Headings';
-import { featuresData } from '../../data';
 import { MicroHeading } from '../styledElements/Headings';
 import Paragraph from '../styledElements/Paragraphs';
 import bgPattern from '../../assets/bg-pattern-home-3.svg';
+import { useGlobalContext } from '../../context';
 
 const StyledSection = styled.section`
   background-color: var(--sacrementoGreen);
@@ -42,7 +41,7 @@ const Container = styled.div`
 `;
 
 const Features = () => {
-  const [features, setFeatures] = useState(featuresData);
+  const { features } = useGlobalContext();
 
   return (
     <StyledSection>
