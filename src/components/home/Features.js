@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {
   maxWidthLg,
-  sectionSpacingMd,
+  sectionSpacingLg,
   twoCol,
   flexAlign,
 } from '../../abstracts/Mixins';
@@ -27,7 +27,7 @@ const StyledSection = styled.section`
 
 const Container = styled.div`
   ${maxWidthLg}
-  ${sectionSpacingMd}
+  ${sectionSpacingLg}
   ${twoCol}
 
   .feature {

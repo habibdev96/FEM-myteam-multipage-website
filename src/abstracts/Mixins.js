@@ -13,6 +13,13 @@ const twoCol = css`
   gap: var(--gap);
 `;
 
+const threeCol = css`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: var(--gap);
+`;
+
 const headingStyles = css`
   font-weight: 700;
   letter-spacing: 0.1rem;
@@ -55,6 +62,7 @@ const maxWidthLg = css`
 export {
   flexAlign,
   twoCol,
+  threeCol,
   headingStyles,
   textStyles,
   sectionSpacingSm,
