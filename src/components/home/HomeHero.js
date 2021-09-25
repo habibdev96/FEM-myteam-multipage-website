@@ -34,12 +34,6 @@ const Container = styled.div`
   ${twoCol}
   position: relative;
   z-index: 10;
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-  }
 `;
 
 const HomeHero = () => {
@@ -50,7 +44,7 @@ const HomeHero = () => {
         <HeroHeading>
           Find the best <span>talent</span>
         </HeroHeading>
-        <div className='info'>
+        <div>
           <StyledUnderline raptureBlue />
           <Paragraph lg>
             Finding the right people and building high performing teams can be

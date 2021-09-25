@@ -6,6 +6,7 @@ const Paragraph = styled.p`
   color: var(--white);
 
   ${({ lg }) => lg && `font-size: 1.8rem`}
+  ${({ md }) => md && `font-size: 1.5rem`}
 `;
 
 export default Paragraph;
