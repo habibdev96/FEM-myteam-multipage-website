@@ -6,6 +6,13 @@ import testimonialsAvatarOne from './assets/avatar-kady.jpg';
 import testimonialsAvatarTwo from './assets/avatar-aiysha.jpg';
 import testimonialsAvatarThree from './assets/avatar-arthur.jpg';
 
+import directorImgOne from './assets/avatar-nikita.jpg';
+import directorImgTwo from './assets/avatar-christian.jpg';
+import directorImgThree from './assets/avatar-cruz.jpg';
+import directorImgFour from './assets/avatar-drake.jpg';
+import directorImgFive from './assets/avatar-griffin.jpg';
+import directorImgSix from './assets/avatar-aden.jpg';
+
 export const featuresData = [
   {
     id: 1,
@@ -54,5 +61,56 @@ export const testimonialsData = [
     user: 'Arthur Clarke',
     role: 'Co-founder of MyPhysio',
     avatar: testimonialsAvatarThree,
+  },
+];
+
+export const directorsData = [
+  {
+    id: 1,
+    avatar: directorImgOne,
+    director: 'Nikita Marks',
+    role: 'Founder & CEO',
+    quote:
+      '“It always amazes me how much talent there is in every corner of the globe.”',
+  },
+  {
+    id: 2,
+    avatar: directorImgTwo,
+    director: 'Cristian Duncan',
+    role: 'Co-Founder & COO',
+    quote:
+      '“Distributed teams required unique processes. You need to approach work in a new way.”',
+  },
+  {
+    id: 3,
+    avatar: directorImgThree,
+    director: 'Cruz Homer',
+    role: 'Co-Founder & CTO',
+    quote:
+      "“Technology is at the forefront of enabling distributed teams. That's where we come in.”",
+  },
+  {
+    id: 4,
+    avatar: directorImgFour,
+    director: 'Drake Heaton',
+    role: 'Business Development Lead',
+    quote:
+      '“Hiring similar people from similar backgrounds is a surefire way to stunt innovation.”',
+  },
+  {
+    id: 5,
+    avatar: directorImgFive,
+    director: 'Griffin Wise',
+    role: 'Lead Marketing',
+    quote:
+      '“Unique perspectives shape unique products, which is what you need to survive these days.”',
+  },
+  {
+    id: 6,
+    avatar: directorImgSix,
+    director: 'Aden Allan',
+    role: 'Head of Talent',
+    quote:
+      '“Empowered teams create truly amazing products. Set the north star and let them follow it.”',
   },
 ];

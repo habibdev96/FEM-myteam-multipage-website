@@ -1,5 +1,6 @@
 import { useGlobalContext } from '../context';
 import AboutSubHero from '../components/about/AboutSubHero';
+import Directors from '../components/about/Directors';
 
 const About = () => {
   const { scrollToTop } = useGlobalContext();
@@ -8,6 +9,9 @@ const About = () => {
   return (
     <>
       <AboutSubHero />
+      <main>
+        <Directors />
+      </main>
     </>
   );
 };
