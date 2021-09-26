@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { SectionHeading } from '../styledElements/Headings';
-import Button from '../styledElements/Buttons';
+import { Button } from '../styledElements/Buttons';
 import {
   sectionSpacingMd,
   maxWidthSm,

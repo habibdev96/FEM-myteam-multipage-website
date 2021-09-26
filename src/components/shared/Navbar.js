@@ -6,7 +6,7 @@ import {
   sectionSpacingSm,
   flexAlign,
 } from '../../abstracts/Mixins';
-import Button from '../styledElements/Buttons';
+import { Button } from '../styledElements/Buttons';
 
 const Container = styled.div`
   ${maxWidthLg}

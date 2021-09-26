@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { textStyles } from '../../abstracts/Mixins';
 
-const Button = styled(Link)`
+export const Button = styled(Link)`
   ${textStyles}
   font-size: 1.8rem;
   padding: 0.5rem 2rem;
@@ -37,4 +37,24 @@ const Button = styled(Link)`
     `}
 `;
 
-export default Button;
+export const FormButton = styled.input`
+  ${textStyles}
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  width: 40%;
+  margin-top: 2rem;
+  border: 0.1rem solid var(--white);
+  color: var(--white);
+  border-radius: var(--mainRadius);
+  transition: var(--mainTransition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--white);
+    color: var(--sacrementoGreen);
+  }
+`;
