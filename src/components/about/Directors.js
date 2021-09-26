@@ -4,7 +4,6 @@ import { maxWidthLg, sectionSpacingLg, threeCol } from '../../abstracts/Mixins';
 import Director from './Director';
 import bgPatternOne from '../../assets/bg-pattern-about-2-contact-1.svg';
 import bgPatternTwo from '../../assets/bg-pattern-home-4-about-3.svg';
-
 import { useGlobalContext } from '../../context';
 
 const StyledSection = styled.section`

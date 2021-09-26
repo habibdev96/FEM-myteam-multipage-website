@@ -14,8 +14,8 @@ const StyledSection = styled.section`
   .bg-pattern {
     position: absolute;
     width: 15%;
-    bottom: 0;
-    right: -5%;
+    bottom: -1%;
+    right: -7%;
   }
 `;
 

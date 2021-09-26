@@ -13,6 +13,12 @@ import directorImgFour from './assets/avatar-drake.jpg';
 import directorImgFive from './assets/avatar-griffin.jpg';
 import directorImgSix from './assets/avatar-aden.jpg';
 
+import clientLogoOne from './assets/logo-the-verge.png';
+import clientLogoTwo from './assets/logo-jakarta-post.png';
+import clientLogoThree from './assets/logo-the-guardian.png';
+import clientLogoFour from './assets/logo-tech-radar.png';
+import clientLogoFive from './assets/logo-gadgets-now.png';
+
 export const featuresData = [
   {
     id: 1,
@@ -112,5 +118,33 @@ export const directorsData = [
     role: 'Head of Talent',
     quote:
       '“Empowered teams create truly amazing products. Set the north star and let them follow it.”',
+  },
+];
+
+export const clientsData = [
+  {
+    id: 1,
+    company: 'the verge',
+    logo: clientLogoOne,
+  },
+  {
+    id: 2,
+    company: 'the jakarta post',
+    logo: clientLogoTwo,
+  },
+  {
+    id: 3,
+    company: 'the guardian',
+    logo: clientLogoThree,
+  },
+  {
+    id: 4,
+    company: 'techradar',
+    logo: clientLogoFour,
+  },
+  {
+    id: 5,
+    company: 'gadets now',
+    logo: clientLogoFive,
   },
 ];

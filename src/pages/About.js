@@ -1,6 +1,7 @@
 import { useGlobalContext } from '../context';
 import AboutSubHero from '../components/about/AboutSubHero';
 import Directors from '../components/about/Directors';
+import Clients from '../components/about/Clients';
 
 const About = () => {
   const { scrollToTop } = useGlobalContext();
@@ -11,6 +12,7 @@ const About = () => {
       <AboutSubHero />
       <main>
         <Directors />
+        <Clients />
       </main>
     </>
   );
