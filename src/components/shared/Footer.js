@@ -8,6 +8,7 @@ import {
   textStyles,
 } from '../../abstracts/Mixins';
 import { FaFacebook, FaPinterestSquare, FaTwitter } from 'react-icons/fa';
+import Tag from './Tag';
 
 const StyledFooter = styled.footer`
   background-color: var(--darkGreen);
@@ -104,6 +105,7 @@ const Footer = () => {
           <p className='copyright'>Copyright 2021. All Rights Reserved</p>
         </div>
       </Container>
+      <Tag />
     </StyledFooter>
   );
 };
