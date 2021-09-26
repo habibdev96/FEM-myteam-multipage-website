@@ -148,3 +148,21 @@ export const clientsData = [
     logo: clientLogoFive,
   },
 ];
+
+export const contactData = [
+  {
+    id: 1,
+    icon: featureIconOne,
+    description: 'The quality of our talent network',
+  },
+  {
+    id: 2,
+    icon: featureIconTwo,
+    description: 'Usage & implementation of our software',
+  },
+  {
+    id: 3,
+    icon: featureIconThree,
+    description: 'How we help drive innovation',
+  },
+];

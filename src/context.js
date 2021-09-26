@@ -4,6 +4,7 @@ import {
   testimonialsData,
   directorsData,
   clientsData,
+  contactData,
 } from './data';
 
 const AppContext = React.createContext();
@@ -13,6 +14,7 @@ export const AppProvider = ({ children }) => {
   const [testimonials, setTestimonials] = useState(testimonialsData);
   const [directors, setDirectors] = useState(directorsData);
   const [clients, setClients] = useState(clientsData);
+  const [contactInfo, setContactInfo] = useState(contactData);
 
   const scrollToTop = () => window.scrollTo(0, 0);
 
@@ -24,6 +26,7 @@ export const AppProvider = ({ children }) => {
         testimonials,
         directors,
         clients,
+        contactInfo,
       }}
     >
       {children}

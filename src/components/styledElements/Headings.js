@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { headingStyles } from '../../abstracts/Mixins';
 
 export const HeroHeading = styled.h1`
@@ -26,6 +26,14 @@ export const SectionHeading = styled.h2`
 
 export const SubHeroHeading = styled(SectionHeading)`
   font-size: 6.4rem;
+
+  ${({ contact }) =>
+    contact &&
+    css`
+      font-size: 3.2rem;
+      color: var(--lightCoral);
+      padding: 2rem 0;
+    `}
 `;
 
 export const MicroHeading = styled.h3`
