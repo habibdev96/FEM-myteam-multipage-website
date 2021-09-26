@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import { SectionHeading, MicroHeading } from '../styledElements/Headings';
-import Paragraph from '../styledElements/Paragraphs';
+import { SectionHeading } from '../styledElements/Headings';
 import { sectionSpacingLg, maxWidthLg, threeCol } from '../../abstracts/Mixins';
-import quoteIcon from '../../assets/icon-quotes.svg';
 import bgPatternOne from '../../assets/bg-pattern-home-4-about-3.svg';
 import bgPatternTwo from '../../assets/bg-pattern-home-5.svg';
+import Testimonial from './Testimonial';
 import { useGlobalContext } from '../../context';
 
 const StyledSection = styled.section`
@@ -36,32 +35,6 @@ const Container = styled.div`
     ${threeCol}
     padding: 5rem 0;
   }
-
-  .testimonial {
-    position: relative;
-  }
-
-  .icon {
-    position: absolute;
-    width: 20%;
-    top: -10%;
-    left: 40%;
-    z-index: 1;
-  }
-
-  .quote {
-    padding-bottom: 1rem;
-  }
-
-  .about {
-    padding: 2rem 0;
-  }
-
-  .avatar {
-    width: 10rem;
-    border: 0.3rem solid var(--raptureBlue);
-    border-radius: 50%;
-  }
 `;
 
 const Testimonials = () => {
@@ -77,21 +50,7 @@ const Testimonials = () => {
         </SectionHeading>
         <div className='testimonials'>
           {testimonials.map((testimonial) => (
-            <article key={testimonial.id} className='testimonial'>
-              <img src={quoteIcon} alt='' className='icon' />
-              <blockquote className='quote'>
-                <Paragraph md>{testimonial.quote}</Paragraph>
-              </blockquote>
-              <div className='about'>
-                <MicroHeading raptureBlue>{testimonial.user}</MicroHeading>
-                <Paragraph sm>{testimonial.role}</Paragraph>
-              </div>
-              <img
-                src={testimonial.avatar}
-                alt={testimonial.user}
-                className='avatar'
-              />
-            </article>
+            <Testimonial key={testimonial.id} {...testimonial} />
           ))}
         </div>
       </Container>
