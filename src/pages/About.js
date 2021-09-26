@@ -1,10 +1,15 @@
 import { useGlobalContext } from '../context';
+import AboutSubHero from '../components/about/AboutSubHero';
 
 const About = () => {
   const { scrollToTop } = useGlobalContext();
   scrollToTop();
 
-  return <div>about page</div>;
+  return (
+    <>
+      <AboutSubHero />
+    </>
+  );
 };
 
 export default About;

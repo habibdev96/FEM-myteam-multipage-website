@@ -24,6 +24,10 @@ export const SectionHeading = styled.h2`
   ${({ dark }) => dark && `color: var(--sacrementoGreen)`};
 `;
 
+export const SubHeroHeading = styled(SectionHeading)`
+  font-size: 6.4rem;
+`;
+
 export const MicroHeading = styled.h3`
   ${headingStyles}
   font-size: 1.8rem;
