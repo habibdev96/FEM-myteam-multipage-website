@@ -50,6 +50,8 @@ export const SubHeroHeading = styled(SectionHeading)`
 export const MicroHeading = styled.h3`
   ${headingStyles}
   font-size: 1.8rem;
+  position: relative;
+  z-index: 5;
 
   ${({ lightCoral }) => lightCoral && `color: var(--lightCoral)`};
   ${({ raptureBlue }) => raptureBlue && `color: var(--raptureBlue)`};

@@ -1,11 +1,9 @@
 import styled from 'styled-components';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
 import { SectionHeading } from '../styledElements/Headings';
-import {
-  sectionSpacingLg,
-  maxWidthLg,
-  twoCol,
-  threeCol,
-} from '../../abstracts/Mixins';
+import { sectionSpacingLg, maxWidthLg } from '../../abstracts/Mixins';
 import bgPatternOne from '../../assets/bg-pattern-home-4-about-3.svg';
 import bgPatternTwo from '../../assets/bg-pattern-home-5.svg';
 import Testimonial from './Testimonial';
@@ -53,17 +51,11 @@ const Container = styled.div`
   ${maxWidthLg}
   text-align: center;
 
-  .testimonials {
-    ${threeCol}
+  .slider-container {
     padding: 10rem 0;
-
-    ${Responsive.lg`
-      ${twoCol}
-      justify-content: center;
-    `}
+    margin: 0 2rem;
 
     ${Responsive.sm`
-      grid-template-columns: 1fr;
       padding: 5rem 0;
     `}
   }
@@ -71,6 +63,24 @@ const Container = styled.div`
 
 const Testimonials = () => {
   const { testimonials } = useGlobalContext();
+
+  let settings = {
+    autoplay: true,
+    pauseOnHover: true,
+    autoplaySpeed: 8000,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <StyledSection>
@@ -80,10 +90,16 @@ const Testimonials = () => {
           Delivering real results for top companies. <br /> Some of our{' '}
           <span>success stories.</span>
         </SectionHeading>
-        <div className='testimonials' data-aos='fade-in' data-aos-delay='200'>
-          {testimonials.map((testimonial) => (
-            <Testimonial key={testimonial.id} {...testimonial} />
-          ))}
+        <div
+          className='slider-container'
+          data-aos='fade-in'
+          data-aos-delay='200'
+        >
+          <Slider {...settings}>
+            {testimonials.map((testimonial) => (
+              <Testimonial key={testimonial.id} {...testimonial} />
+            ))}
+          </Slider>
         </div>
       </Container>
       <img src={bgPatternTwo} alt='' className='bg-pattern bg-pattern--two' />

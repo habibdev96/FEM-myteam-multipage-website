@@ -2,16 +2,34 @@ import styled from 'styled-components';
 import quoteIcon from '../../assets/icon-quotes.svg';
 import Paragraph from '../styledElements/Paragraphs';
 import { MicroHeading } from '../styledElements/Headings';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledArticle = styled.article`
   position: relative;
+  margin: 0 5rem;
+
+  ${Responsive.sm`
+    margin: 0 1rem;
+  `}
+
+  &:hover {
+    cursor: grab;
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
 
   .icon {
     position: absolute;
-    width: 20%;
-    top: -10%;
-    left: 40%;
+    width: 10%;
+    top: 50%;
+    left: 60%;
     z-index: 1;
+
+    ${Responsive.sm`
+      width: 30%;
+    `}
   }
 
   .quote {
@@ -26,6 +44,9 @@ const StyledArticle = styled.article`
     width: 10rem;
     border: 0.3rem solid var(--raptureBlue);
     border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
   }
 `;
 

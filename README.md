@@ -3,6 +3,7 @@
 3 page website challenge for frontend mentor
 
 #### Features
+- testimonial carousel on home page
 - show hide directors content on about page 
 - form validation on contact page
 - mobile menu & toggler
@@ -14,6 +15,7 @@
 - styled components
 
 #### Libraries
+- react-slick
 - react-router-dom
 - react-hook-form
 - aos.js
