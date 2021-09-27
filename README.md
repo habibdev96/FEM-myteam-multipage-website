@@ -2,6 +2,8 @@
 
 3 page website challenge for frontend mentor
 
+site: https://fem-myteam-multi-page-website-challenge.netlify.app/
+
 #### Features
 - testimonial carousel on home page
 - show hide directors content on about page 
