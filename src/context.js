@@ -16,6 +16,7 @@ export const AppProvider = ({ children }) => {
   const [directors, setDirectors] = useState(directorsData);
   const [clients, setClients] = useState(clientsData);
   const [contactInfo, setContactInfo] = useState(contactData);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const {
     handleSubmit,
@@ -39,6 +40,8 @@ export const AppProvider = ({ children }) => {
         register,
         errors,
         onSubmit,
+        isSidebarOpen,
+        setIsSidebarOpen,
       }}
     >
       {children}

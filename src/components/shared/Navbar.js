@@ -8,6 +8,7 @@ import {
 } from '../../abstracts/Mixins';
 import { Button } from '../styledElements/Buttons';
 import Responsive from '../../abstracts/Responsive';
+import MobileMenuToggler from './MobileMenuToggler';
 
 const Container = styled.div`
   ${maxWidthLg}
@@ -56,6 +57,7 @@ const Navbar = () => {
         <Button to='/Contact' primary={+true} className='btn'>
           contact us
         </Button>
+        <MobileMenuToggler />
       </Container>
     </nav>
   );

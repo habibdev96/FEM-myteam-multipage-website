@@ -7,8 +7,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Navbar from './components/shared/Navbar';
 import Footer from './components/shared/Footer';
-
-// TODO: add aos | add mobile menu
+import MobileMenu from './components/shared/MobileMenu';
 
 const App = () => {
   AOS.init({ offset: 10, duration: 1000, once: true });
@@ -18,6 +17,7 @@ const App = () => {
       <Globals />
       <Router>
         <Navbar />
+        <MobileMenu />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/About' component={About} />
