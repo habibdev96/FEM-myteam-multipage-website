@@ -4,6 +4,7 @@ import Paragraph from '../styledElements/Paragraphs';
 import StyledUnderline from '../styledElements/Underline';
 import { twoCol, maxWidthLg, sectionSpacingMd } from '../../abstracts/Mixins';
 import bgPattern from '../../assets/bg-pattern-about-1-mobile-nav-1.svg';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledHeader = styled.header`
   position: relative;
@@ -14,6 +15,10 @@ const StyledHeader = styled.header`
     width: 10%;
     bottom: 0;
     right: -5%;
+
+    ${Responsive.lg`
+      width: 15%;
+    `}
   }
 `;
 
@@ -21,6 +26,10 @@ const Container = styled.div`
   ${maxWidthLg}
   ${sectionSpacingMd}
   ${twoCol}
+
+  ${Responsive.md`
+    grid-template-columns: 1fr;
+  `}
 `;
 
 const AboutSubHero = () => {

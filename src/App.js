@@ -6,6 +6,8 @@ import Contact from './pages/Contact';
 import Navbar from './components/shared/Navbar';
 import Footer from './components/shared/Footer';
 
+// TODO: make responsive | add aos | add mobile menu
+
 const App = () => {
   return (
     <>

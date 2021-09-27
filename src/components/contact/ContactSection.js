@@ -11,6 +11,7 @@ import Paragraph from '../styledElements/Paragraphs';
 import bgPatternOne from '../../assets/bg-pattern-about-2-contact-1.svg';
 import bgPatternTwo from '../../assets/bg-pattern-contact-2.svg';
 import { useGlobalContext } from '../../context';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledSection = styled.section`
   position: relative;
@@ -19,6 +20,14 @@ const StyledSection = styled.section`
   .bg-pattern {
     position: absolute;
     width: 18%;
+
+    ${Responsive.sm`
+      width: 25%;
+    `}
+
+    ${Responsive.xs`
+      width: 35%;
+    `}
 
     &--one {
       top: 0;
@@ -36,6 +45,10 @@ const Container = styled.div`
   ${sectionSpacingMd}
   ${maxWidthLg}
   ${twoCol}
+
+  ${Responsive.md`
+    grid-template-columns: 1fr;
+  `}
   
 
   .contact-info {

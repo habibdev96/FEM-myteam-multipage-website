@@ -2,9 +2,15 @@ import styled from 'styled-components';
 import { HeroHeading } from '../styledElements/Headings';
 import Paragraph from '../styledElements/Paragraphs';
 import StyledUnderline from '../styledElements/Underline';
-import { maxWidthLg, twoCol, sectionSpacingLg } from '../../abstracts/Mixins';
+import {
+  maxWidthLg,
+  twoCol,
+  sectionSpacingLg,
+  sectionSpacingMd,
+} from '../../abstracts/Mixins';
 import heroPatternOne from '../../assets/bg-pattern-home-1.svg';
 import heroPatternTwo from '../../assets/bg-pattern-home-2.svg';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledHeader = styled.header`
   position: relative;
@@ -14,16 +20,28 @@ const StyledHeader = styled.header`
     position: absolute;
 
     &--one {
-      width: 20%;
+      width: 15%;
       top: 0;
-      left: -10%;
+      left: -5%;
       z-index: 5;
+
+      ${Responsive.lg`
+        width: 25%;
+      `}
+
+      ${Responsive.sm`
+        width: 40%;
+      `}
     }
 
     &--two {
       width: 20%;
       right: 10%;
       bottom: 0;
+
+      ${Responsive.lg`
+        width: 40%;
+      `}
     }
   }
 `;
@@ -34,6 +52,11 @@ const Container = styled.div`
   ${twoCol}
   position: relative;
   z-index: 10;
+
+  ${Responsive.md`
+  grid-template-columns: 1fr;
+  ${sectionSpacingMd}
+  `}
 `;
 
 const HomeHero = () => {

@@ -7,6 +7,7 @@ import {
 } from '../../abstracts/Mixins';
 import bgPattern from '../../assets/bg-pattern-about-4.svg';
 import { useGlobalContext } from '../../context';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledSection = styled.section`
   position: relative;
@@ -18,6 +19,10 @@ const StyledSection = styled.section`
     width: 10%;
     top: 0;
     left: 0;
+
+    ${Responsive.lg`
+      width: 20%;
+    `}
   }
 `;
 
@@ -29,7 +34,13 @@ const Container = styled.div`
   .clients {
     ${flexAlign}
     justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
     padding: 5rem 0;
+
+    ${Responsive.xl`
+      justify-content: center;
+    `}
   }
 
   .client {

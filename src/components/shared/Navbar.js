@@ -7,6 +7,7 @@ import {
   flexAlign,
 } from '../../abstracts/Mixins';
 import { Button } from '../styledElements/Buttons';
+import Responsive from '../../abstracts/Responsive';
 
 const Container = styled.div`
   ${maxWidthLg}
@@ -24,6 +25,16 @@ const Container = styled.div`
 
   .links {
     ${flexAlign}
+
+    ${Responsive.md`
+      display: none;
+    `}
+  }
+
+  .btn {
+    ${Responsive.md`
+      display: none;
+    `}
   }
 `;
 
@@ -42,7 +53,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Button to='/Contact' primary={+true}>
+        <Button to='/Contact' primary={+true} className='btn'>
           contact us
         </Button>
       </Container>

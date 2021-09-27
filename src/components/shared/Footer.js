@@ -9,6 +9,7 @@ import {
 } from '../../abstracts/Mixins';
 import { FaFacebook, FaPinterestSquare, FaTwitter } from 'react-icons/fa';
 import Tag from './Tag';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledFooter = styled.footer`
   background-color: var(--darkGreen);
@@ -19,9 +20,18 @@ const Container = styled.div`
   ${sectionSpacingSm}
   ${flexAlign}
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  ${Responsive.lg`
+    justify-content: center;
+  `}
 
   .left {
     ${flexAlign}
+
+    ${Responsive.sm`
+      flex-direction: column; 
+    `}
   }
 
   .links {
@@ -32,6 +42,10 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     margin-left: 5rem;
+
+    ${Responsive.md`
+      margin-left: 0;
+    `}
 
     li {
       ${textStyles}
@@ -46,6 +60,10 @@ const Container = styled.div`
     justify-content: flex-end;
     gap: 2rem;
     margin-bottom: 6rem;
+
+    ${Responsive.lg`
+      justify-content: center;
+    `}
   }
 
   .social {
@@ -64,6 +82,10 @@ const Container = styled.div`
     font-size: 1.5rem;
     color: var(--white);
     opacity: 0.7;
+
+    ${Responsive.sm`
+      text-align: center;
+    `}
   }
 `;
 

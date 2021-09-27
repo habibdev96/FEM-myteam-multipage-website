@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 import { SectionHeading } from '../styledElements/Headings';
-import { maxWidthLg, sectionSpacingLg, threeCol } from '../../abstracts/Mixins';
+import {
+  maxWidthLg,
+  sectionSpacingLg,
+  twoCol,
+  threeCol,
+} from '../../abstracts/Mixins';
 import Director from './Director';
 import bgPatternOne from '../../assets/bg-pattern-about-2-contact-1.svg';
 import bgPatternTwo from '../../assets/bg-pattern-home-4-about-3.svg';
 import { useGlobalContext } from '../../context';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledSection = styled.section`
   position: relative;
@@ -18,12 +24,20 @@ const StyledSection = styled.section`
       top: 0;
       left: -7%;
       width: 15%;
+
+      ${Responsive.lg`
+        width: 35%;
+      `}
     }
 
     &--two {
       bottom: 0;
       right: 0;
       width: 10%;
+
+      ${Responsive.lg`
+        width: 35%;
+      `}
     }
   }
 `;
@@ -36,6 +50,14 @@ const Container = styled.div`
   .directors {
     ${threeCol}
     padding: 10rem 0;
+
+    ${Responsive.lg`
+      ${twoCol}
+    `}
+
+    ${Responsive.sm`
+      grid-template-columns: 1fr;
+    `}
   }
 `;
 

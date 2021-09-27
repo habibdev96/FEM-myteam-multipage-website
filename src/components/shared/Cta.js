@@ -7,6 +7,7 @@ import {
   flexAlign,
 } from '../../abstracts/Mixins';
 import bgPattern from '../../assets/bg-pattern-home-6-about-5.svg';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledSection = styled.section`
   position: relative;
@@ -18,6 +19,10 @@ const StyledSection = styled.section`
     width: 20%;
     bottom: 0;
     left: 0;
+
+    ${Responsive.sm`
+      width: 40%;
+    `}
   }
 `;
 
@@ -26,6 +31,12 @@ const Container = styled.div`
   ${maxWidthSm}
   ${flexAlign}
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  ${Responsive.md`
+    text-align: center;
+    justify-content: center;
+  `}
 `;
 
 const Cta = () => {

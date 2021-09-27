@@ -1,11 +1,16 @@
 import styled, { css } from 'styled-components';
 import { headingStyles } from '../../abstracts/Mixins';
+import Responsive from '../../abstracts/Responsive';
 
 export const HeroHeading = styled.h1`
   ${headingStyles}
   font-size: 10rem;
   color: var(--white);
   width: 90%;
+
+  ${Responsive.lg`
+    font-size: 6.4rem;
+  `}
 
   span {
     color: var(--lightCoral);
@@ -15,7 +20,13 @@ export const HeroHeading = styled.h1`
 export const SectionHeading = styled.h2`
   ${headingStyles}
   font-size: 4.8rem;
+  position: relative;
+  z-index: 5;
   color: var(--white);
+
+  ${Responsive.md`
+    font-size: 3.2rem;
+  `}
 
   span {
     color: var(--raptureBlue);
