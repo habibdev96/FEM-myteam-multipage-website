@@ -69,7 +69,7 @@ const ContactSection = () => {
     <StyledSection>
       <img src={bgPatternOne} alt='' className='bg-pattern bg-pattern--one' />
       <Container>
-        <div>
+        <div data-aos='fade-in'>
           <SubHeroHeading>Contact</SubHeroHeading>
           <SubHeroHeading contact>Ask us about</SubHeroHeading>
           {contactInfo.map((item) => (

@@ -68,8 +68,8 @@ const Directors = () => {
     <StyledSection>
       <img src={bgPatternOne} alt='' className='bg-pattern bg-pattern--one' />
       <Container>
-        <SectionHeading>Meet the directors</SectionHeading>
-        <div className='directors'>
+        <SectionHeading data-aos='fade-in'>Meet the directors</SectionHeading>
+        <div className='directors' data-aos='fade-in' data-aos-delay='200'>
           {directors.map((director) => (
             <Director key={director.id} {...director} />
           ))}

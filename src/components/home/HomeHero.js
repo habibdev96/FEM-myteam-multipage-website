@@ -29,6 +29,10 @@ const StyledHeader = styled.header`
         width: 25%;
       `}
 
+      ${Responsive.md`
+        opacity: 0.7;
+      `}
+
       ${Responsive.sm`
         width: 40%;
       `}
@@ -54,8 +58,8 @@ const Container = styled.div`
   z-index: 10;
 
   ${Responsive.md`
-  grid-template-columns: 1fr;
-  ${sectionSpacingMd}
+    grid-template-columns: 1fr;
+    ${sectionSpacingMd}
   `}
 `;
 
@@ -64,10 +68,10 @@ const HomeHero = () => {
     <StyledHeader>
       <img src={heroPatternOne} alt='' className='bg-pattern bg-pattern--one' />
       <Container>
-        <HeroHeading>
+        <HeroHeading data-aos='fade-in'>
           Find the best <span>talent</span>
         </HeroHeading>
-        <div>
+        <div data-aos='fade-in' data-aos-delay='200'>
           <StyledUnderline raptureBlue />
           <Paragraph lg>
             Finding the right people and building high performing teams can be

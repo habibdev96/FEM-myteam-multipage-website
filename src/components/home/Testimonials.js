@@ -76,11 +76,11 @@ const Testimonials = () => {
     <StyledSection>
       <img src={bgPatternOne} alt='' className='bg-pattern bg-pattern--one' />
       <Container>
-        <SectionHeading>
+        <SectionHeading data-aos='fade-in'>
           Delivering real results for top companies. <br /> Some of our{' '}
           <span>success stories.</span>
         </SectionHeading>
-        <div className='testimonials'>
+        <div className='testimonials' data-aos='fade-in' data-aos-delay='200'>
           {testimonials.map((testimonial) => (
             <Testimonial key={testimonial.id} {...testimonial} />
           ))}

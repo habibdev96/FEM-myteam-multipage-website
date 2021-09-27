@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import { SubHeroHeading } from '../styledElements/Headings';
 import Paragraph from '../styledElements/Paragraphs';
 import StyledUnderline from '../styledElements/Underline';
-import { twoCol, maxWidthLg, sectionSpacingMd } from '../../abstracts/Mixins';
-import bgPattern from '../../assets/bg-pattern-about-1-mobile-nav-1.svg';
+import { twoCol, maxWidthLg, sectionSpacingLg } from '../../abstracts/Mixins';
+import bgPattern from '../../assets/bg-pattern-home-4-about-3.svg';
+import bgPatternTwo from '../../assets/bg-pattern-about-1-mobile-nav-1.svg';
 import Responsive from '../../abstracts/Responsive';
 
 const StyledHeader = styled.header`
@@ -12,19 +13,35 @@ const StyledHeader = styled.header`
 
   .bg-pattern {
     position: absolute;
-    width: 10%;
-    bottom: 0;
-    right: -5%;
+    width: 15%;
 
     ${Responsive.lg`
       width: 15%;
     `}
+
+    ${Responsive.md`
+      width: 25%;
+    `}
+
+    ${Responsive.sm`
+      width: 35%;
+    `}
+
+    &--one {
+      bottom: 0;
+      right: 0;
+    }
+
+    &--two {
+      top: 0;
+      left: 0;
+    }
   }
 `;
 
 const Container = styled.div`
   ${maxWidthLg}
-  ${sectionSpacingMd}
+  ${sectionSpacingLg}
   ${twoCol}
 
   ${Responsive.md`
@@ -35,9 +52,10 @@ const Container = styled.div`
 const AboutSubHero = () => {
   return (
     <StyledHeader>
+      <img src={bgPattern} alt='' className='bg-pattern bg-pattern--one' />
       <Container>
-        <SubHeroHeading>About</SubHeroHeading>
-        <div>
+        <SubHeroHeading data-aos='fade-in'>About</SubHeroHeading>
+        <div data-aos='fade-in' data-aos-delay='200'>
           <StyledUnderline lightCoral />
           <Paragraph lg>
             We help companies build dynamic teams made up of top global talent.
@@ -47,7 +65,7 @@ const AboutSubHero = () => {
           </Paragraph>
         </div>
       </Container>
-      <img src={bgPattern} alt='' className='bg-pattern' />
+      <img src={bgPatternTwo} alt='' className='bg-pattern bg-pattern--two' />
     </StyledHeader>
   );
 };

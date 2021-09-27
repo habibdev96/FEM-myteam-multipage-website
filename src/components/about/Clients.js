@@ -59,8 +59,8 @@ const Clients = () => {
     <StyledSection>
       <img src={bgPattern} alt='' className='bg-pattern' />
       <Container>
-        <SectionHeading>Some of our clients</SectionHeading>
-        <div className='clients'>
+        <SectionHeading data-aos='fade-in'>Some of our clients</SectionHeading>
+        <div className='clients' data-aos='fade-in' data-aos-delay='200'>
           {clients.map((client) => (
             <img
               key={client.id}

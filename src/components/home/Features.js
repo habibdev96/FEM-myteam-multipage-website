@@ -54,13 +54,13 @@ const Features = () => {
   return (
     <StyledSection>
       <Container>
-        <div>
+        <div data-aos='fade-in'>
           <StyledUnderline lightCoral />
           <SectionHeading>
             Build & manage distributed teams like no one else.
           </SectionHeading>
         </div>
-        <div>
+        <div data-aos='fade-in' data-aos-delay='200'>
           {features.map((feature) => (
             <Feature key={feature.id} {...feature} />
           ))}

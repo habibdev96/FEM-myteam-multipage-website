@@ -49,7 +49,11 @@ const ContactForm = () => {
   const { handleSubmit, register, errors, onSubmit } = useGlobalContext();
 
   return (
-    <StyledForm onSubmit={handleSubmit(onSubmit)} data-aos='fade-in'>
+    <StyledForm
+      onSubmit={handleSubmit(onSubmit)}
+      data-aos='fade-in'
+      data-aos-delay='200'
+    >
       <div className={`form-control ${errors.name && 'input-error'}`}>
         <input
           type='text'
